@@ -164,9 +164,10 @@ To buld and run this project a MySQL server must be installed with the following
 The easiest way to obtain all of the above, and in addition to run the project is to utilize the docker-compose.yml file located at the root of this project.
 Docker and docker-compose is required for this to work: (<a href="https://docs.docker.com/get-docker/">Install Docker</a>).
 
-Simply execute the following command at the root of the project. This will expose the service on port 8080, and the database on port 3306.
+Simply execute the following commands at the root of the project. This will expose the service on port `8085`, and the database on port `3309`. 
 
   ```
+  cd docker
   docker-compose --build
   ```
 
