@@ -128,7 +128,7 @@ To tackle the problem it is essential to analyze current solutions for persistin
 
 
 <div align="center"> 
-    <a href="https://www.percona.com/blog/2011/02/14/moving-subtrees-in-closure-table/">
+    <a href="https://www.slideshare.net/billkarwin/models-for-hierarchical-data">
     <img src="img/comparison.png" alt="Logo" width="550" >
     </a>
 </div>
