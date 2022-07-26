@@ -56,36 +56,18 @@
 <!-- ABOUT THE PROJECT -->
 ## Introduction
 
-This project was a coding challenge conducted in connection with an interviewing process for a software engineering position.
+This project is an implementation of hieracical data persisted in a relational database using the Closure table pattern. The project is implemented using Spring boot.
 
 
 **Context**:
-We in Amazing Co need to model how our company is structured so we can do awesome stuff.We have a root node (only one) and several children nodes, each one with its own children as well. It's a tree-based structure. Something like:
 
-``` 
-       root
-       /  \
-      a    b
-      |
-      c
-
-```
-
-We need two HTTP APIs that will serve the two basic operations:
+This project exposes a sample of endpoints including:
 1. Get all descendant nodes of a given node (the given node can be anyone in the tree structure).
 2. Change the parent node of a given node (the given node can be anyone in the tree structure).
 
-They need to answer quickly, even with tons of nodes. Also, we can't afford to lose this information, so some sort of persistence is required.
-Each node should have the following info:
-1. node identification
-2. who is the parent node
-3. who is the root node
-4. the height of the node. In the above example, height(root) = 0 and height(a) == 1.
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 ### Approach
 
-To tackle the problem it is essential to analyze current solutions for persisting hierarchical data in relational databases. My research for this project made me look into four different approaches, each of which has its advantages and disadvantages. The following is a short summarization of the approaches and their characteristics. 
+There exists multiple different approaches to how to persist hierarchical data in a relational database. My research for this project made me look into four different approaches, each of which has its advantages and disadvantages. The following is a short summarization of the approaches and their characteristics. 
 
 - Adjacency list
   - Each node stores a reference to its parent
@@ -133,7 +115,7 @@ To tackle the problem it is essential to analyze current solutions for persistin
     </a>
 </div>
 
-The Closure Table design was selected because it fulfills the requirements of the challenge, namely that it is able to query subtrees (descendants) efficiently. It is also able to efficiently modify the tree i.e. deleting, inserting, and changing parent (move subtree). However, the trade-off for this is inefficient space complexity.   
+I found the Closure Table design the most interesting namely because that it is able to query subtrees (descendants) efficiently. It is also able to efficiently modify the tree i.e. deleting, inserting, and changing parent (move subtree). However, the trade-off for this is inefficient space complexity.   
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
